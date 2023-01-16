@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.optimize import differential_evolution, NonlinearConstraint, Bounds
-import sample_data as sp
+import config as sp
 
 def objective_func(x, e, bp, bq):
     perc_qty_change = np.multiply(e,x)
@@ -20,8 +20,8 @@ if __name__ == '__main__':
     num_items = sp.e.size # number of items
     
     #Constraints
-    max_price_change = 0.2 # Constraint: Maximum % Price Change allowed per Item
-    budget = 300 # Constraint: Maximum Budget Available
+    max_price_change = sp.price_change # Constraint: Maximum % Price Change allowed per Item
+    budget = sp.budget # Constraint: Maximum Budget Available
 
     #Solver
     best = differential_evolution(
