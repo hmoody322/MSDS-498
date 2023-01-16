@@ -5,7 +5,7 @@ def price_change(n):
     user_list=[]
     i=0
     while i<n:
-        price = float(input("Enter item_" + str(i+1) + " % price reduction (Ex: 0.1 is 10% price reduction): "))
+        price = float(input("Enter item_" + str(i+1) + " price reduction (Ex: 0.1 is 10% price reduction): "))
         user_list.append(price)
         i=i+1
     return np.array(user_list)
