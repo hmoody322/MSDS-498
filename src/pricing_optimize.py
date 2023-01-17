@@ -30,6 +30,7 @@ if __name__ == '__main__':
             args=(sp.e,sp.bp,sp.bq),
             bounds=Bounds(lb=-max_price_change*np.ones(num_items), ub=np.zeros(num_items)),
             constraints=NonlinearConstraint(lambda x: investment(x,sp.bp,sp.bq), lb = 0, ub = budget),
+            workers=-1,
             seed = 1234
     )
 

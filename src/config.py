@@ -9,7 +9,7 @@ import numpy as np
 #budget = 300 # Constraint: Maximum Budget Available
 
 # Simulated Data
-item_count=10
+item_count=100
 bq = np.random.randint(50, 500, size=item_count) # Item Baseline Forecast
 bp = np.random.randint(5, 10, size=item_count) + np.random.rand(item_count)  # Item Current Prices
 e = 3 * np.random.rand(item_count) - 3 # Price Elasticities
